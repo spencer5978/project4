@@ -1,0 +1,359 @@
+---
+title: " "
+format:
+  html:
+    self-contained: false
+    filters: []
+    include-in-header:
+      text: |
+        <style>
+        :root {
+          --cream: #f5f0e8;
+          --green: #3d6b35;
+          --text:  #2c2c1a;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        html, body {
+          background: var(--cream);
+          color: var(--text);
+        }
+
+        /* ── Title page ── */
+        .title-page h1 {
+        font-size: clamp(2.4rem, 7vw, 6rem);
+        font-weight: 800;
+        line-height: 1.1;
+        color: #1a1a0e;
+        margin-bottom: 1.5rem;
+        max-width: 90vw;
+        margin-left: 0;
+        }
+        .eyebrow { font-size: .85rem; letter-spacing: .18em; text-transform: uppercase; color: var(--green); margin-bottom: 1.2rem; font-weight: 600; }
+        .title-page h1 { font-size: clamp(2.4rem,6vw,5rem); font-weight: 800; line-height: 1.1; color: #1a1a0e; margin-bottom: 1.5rem; max-width: 100%; }
+        .deck { font-size: 1.15rem; line-height: 1.8; color: #4a4a35; max-width: 860px; margin-bottom: 1.2rem; }
+        .byline { display: flex; align-items: center; gap: 1.4rem; border-top: 1px solid #c8c0a8; padding-top: 1.8rem; max-width: 860px; }
+        .avatar { width: 48px; height: 48px; border-radius: 50%; background: var(--green); display: flex; align-items: center; justify-content: center; color: var(--cream); font-weight: 700; flex-shrink: 0; }
+        .byline-name { font-size: .95rem; font-weight: 600; }
+        .byline-meta { font-size: .85rem; color: #7a7060; }
+        .scroll-cue { color: var(--green); }
+
+        /* ── Scrollytelling ── */
+        .scroll-section { position: relative; }
+
+        .scroll-graphic {
+          position: sticky;
+          top: 0;
+          height: 100vh;
+          width: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          pointer-events: auto;
+        }
+
+        .scroll-graphic iframe {
+          width: 60vw;
+          border: none;
+          display: block;
+        }
+
+        /* Tall portrait maps */
+        #graphic-nyc iframe,
+        #graphic-la  iframe,
+        #graphic-sf  iframe {
+          width: 28vw;
+        }
+
+        .scroll-steps {
+          position: relative;
+          z-index: 10;
+          margin-top: -100vh;
+          pointer-events: none;
+        }
+
+        .step {
+          min-height: 100vh;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 2rem;
+          pointer-events: none;
+        }
+
+        .step-content {
+          max-width: 420px;
+          text-align: center;
+          pointer-events: auto;
+          background: rgba(245, 240, 232, 0.82);
+          backdrop-filter: blur(4px);
+          -webkit-backdrop-filter: blur(4px);
+          border-radius: 10px;
+          padding: 1.4rem 1.6rem;
+        }
+
+        .step-content h2 {
+          font-size: clamp(1.8rem,3.5vw,2.8rem);
+          font-weight: 800;
+          color: var(--green);
+          margin-bottom: 1rem;
+        }
+
+        .step-content p {
+          font-size: 1.05rem;
+          line-height: 1.8;
+          color: var(--text);
+        }
+
+        .step-content a { color: var(--green); }
+
+        /* ── Interlude ── */
+        .interlude {
+          min-height: 100vh;
+          background: var(--cream);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 12vh 4vw;
+          position: relative;
+          z-index: 20;
+        }
+        .interlude-inner { max-width: 900px; width: 100%; }
+        .interlude-inner h2 { font-size: 2rem; font-weight: 800; color: var(--green); margin-bottom: 1.5rem; }
+        .interlude-inner p { font-size: 1.1rem; line-height: 1.85; margin-bottom: 1.2rem; }
+        .interlude-inner a { color: var(--green); }
+        </style>
+---
+
+```{=html}
+<div class="title-page">
+  <p class="eyebrow">Opinion · Health Policy</p>
+  <h1>High Barriers:<br>The Commercialization of a Meciation</h1>
+  <p class="deck">In 2012, Colorado became the first state to legalize recreational marijuana. In the years since, 40 more states have followed with some form of legalization, and the industry has grown into a multi-billion dollar market. Dispensaries have opened in strip malls, downtown storefronts, and luxury retail spaces. Cannabis has gone mainstream.</p>
+  <p>But the patients who were supposed to benefit from legalization (people managing chronic pain, anxiety, and other conditions for whom traditional medicine has fallen short) are not always the ones being served. For low-income patients and communities of color, the legal cannabis market is often just out of reach.</p>
+  <p>This is the story of a public health promise that has not been kept.</p>
+  <div class="byline">
+    <div class="avatar">SL</div>
+    <div>
+      <p class="byline-name">By Spencer Lyst</p>
+      <p class="byline-meta">April 2026 · 8 min read · <span class="scroll-cue">● Scroll to explore</span></p>
+    </div>
+  </div>
+</div>
+
+<!-- SECTION 1 -->
+<div class="scroll-section">
+  <div class="scroll-graphic" id="graphic-legal"></div>
+  <div class="scroll-steps">
+    <div class="step"><div class="step-content"><h2>Schedule Conflict</h2></div></div>
+    <div class="step"><div class="step-content">
+      <p>Medical marijuana is legal in over 40 states, but it's still a federal crime. In practice, this looks like your employer, in most states, being able to fire you for using a medication your doctor recommended. Only 23 states offer any worker protections, and just 9 of those cover everyone, not only card-carrying patients.</p>
+    </div></div>
+    <div class="step"><div class="step-content">
+      <p>While the map shows a green wave of legalization, the reality is a patchwork of roadblocks. <a href="https://www.dea.gov/sites/default/files/2024-05/2016-17954-HHS.pdf">The federal government's own health agencies concluded years ago that cannabis doesn't meet the criteria for Schedule I (the same category as heroin).</a> Yet it stayed there for decades. The recent push toward rescheduling is real, but incomplete. The people waiting on it are already sick.</p>
+    </div></div>
+  </div>
+</div>
+
+<!-- SECTION 2 -->
+<div class="scroll-section">
+  <div class="scroll-graphic" id="graphic-provider"></div>
+  <div class="scroll-steps">
+    <div class="step"><div class="step-content"><h2>Doctor's Note <em>(you need one, but good luck getting it)</em></h2></div></div>
+    <div class="step"><div class="step-content">
+      <p>Even in states where medical cannabis is fully legal, finding a doctor willing to navigate it with you is its own obstacle course. Physician willingness to recommend cannabis <a href="https://doi.org/10.1186/s12875-021-01559-w">ranges from 10% to 95%</a> across studies. Researchers trace this gap almost entirely to a lack of clinical training, not personal ethics.</p>
+    </div></div>
+    <div class="step"><div class="step-content">
+      <p>Nearly all physicians feel confident managing standard pharmaceuticals. Fewer than 15% say they've received adequate training on how cannabis works in the body — a direct result of federal restrictions that have blocked the large-scale clinical trials that would produce that training.</p>
+    </div></div>
+    <div class="step"><div class="step-content">
+      <p>The workaround is a separate network of "cannabis clinics." These private, cash-only practices exist specifically to issue medical cards. For a patient already struggling with costs, this is yet another financial barrier wearing a lab coat.</p>
+    </div></div>
+  </div>
+</div>
+
+<!-- INTERLUDE: Stigma -->
+<div class="interlude">
+  <div class="interlude-inner">
+    <h2>The Stigma Barrier</h2>
+    <p>TThat clinical uncertainty produces a lack of communication. Many patients who use medical cannabis choose not to tell their primary care doctors. The <a href="https://doi.org/10.1080/02791072.2014.991858">research</a> is consistent on why: a fear of being labeled drug-seeking, fear of judgment, and, for patients from minority communities, fear of what that label might follow them into.</p>
+    <p>Avoiding that conversation is not just uncomfortable, it is medically consequential. Cannabis interacts with other medications, and a provider who does not know you are using it cannot catch those interactions. The stigma does not just create a social barrier. It creates a care gap with real clinical stakes.</p>
+  </div>
+</div>
+
+<!-- SECTION 3 -->
+<div class="scroll-section">
+  <div class="scroll-graphic" id="graphic-terpenes"></div>
+  <div class="scroll-steps">
+    <div class="step"><div class="step-content"><h2>Strains Aren't What You Thought</h2></div></div>
+    <div class="step"><div class="step-content">
+      <p>Walk into any dispensary and you will be offered a familiar binary: <strong>Indica</strong> for relaxing, <strong>Sativa</strong> for energy. It is clean, intuitive, and almost entirely without scientific basis. <a href="https://doi.org/10.1089/can.2024.0127">A 2024 analysis of 140 medicinal strains</a> found that these labels have no meaningful basis in the plants' actual chemical composition.</p>
+    </div></div>
+    <div class="step"><div class="step-content">
+      <p>When researchers mapped terpene profiles, the compounds that actually drive effects, strains marketed as Indica and Sativa were chemically indistinguishable. The categories dispensary staff use to guide medical decisions are, essentially, brand identities. Patients are making health choices based on marketing.</p>
+    </div></div>
+  </div>
+</div>
+
+<!-- SECTION 4 -->
+<div class="scroll-section">
+  <div class="scroll-graphic" id="graphic-nyc"></div>
+  <div class="scroll-steps">
+    <div class="step"><div class="step-content"><h2>The Geographic Gap: NYC</h2></div></div>
+    <div class="step"><div class="step-content">
+      <p>In Manhattan, dispensaries have multiplied alongside juice bars and co-working spaces. In the South Bronx, one of the country's lowest-income urban areas, the legal cannabis market is <strong>nearly invisible</strong>.</p>
+    </div></div>
+    <div class="step"><div class="step-content">
+      <p>A certified patient in the Bronx on Medicaid holds the same legal right to cannabis as someone on the Upper West Side. Without nearby storefronts, without a car, and without funds for delivery fees, that right exists mostly on paper. Research on Bronx patients specifically found that only 45% of those certified ever purchased the medication, and white patients with private insurance were <strong>significantly</strong>more likely to do so.</p>
+    </div></div>
+  </div>
+</div>
+
+<!-- SECTION 5 -->
+<div class="scroll-section">
+  <div class="scroll-graphic" id="graphic-boston"></div>
+  <div class="scroll-steps">
+    <div class="step"><div class="step-content"><h2>The Geographic Gap: Boston</h2></div></div>
+    <div class="step"><div class="step-content">
+      <p>In Boston, dispensaries are concentrated in <strong>Back Bay</strong>and the <strong>Seaport</strong>, among the city's wealthiest and most commercially developed neighborhoods. <strong>Mattapan</strong> and <strong>Roxbury</strong>, with higher proportions of Medicaid patients and lower median incomes, are significantly underserved.</p>
+    </div></div>
+    <div class="step"><div class="step-content">
+      <p>Licensing processes that prioritize commercial real estate viability over community health need effectively push low-income patients out of the legal market entirely, and into either the illicit market or no access at all.</p>
+    </div></div>
+  </div>
+</div>
+
+<!-- SECTION 6 -->
+<div class="scroll-section">
+  <div class="scroll-graphic" id="graphic-la"></div>
+  <div class="scroll-steps">
+    <div class="step"><div class="step-content"><h2>The Geographic Gap: Los Angeles</h2></div></div>
+    <div class="step"><div class="step-content">
+      <p><strong>West Hollywood</strong> and <strong>Santa Monica</strong> have nearly twenty times the dispensary density of <strong>South LA</strong>, a neighborhood that bore the heaviest enforcement burden during decades of cannabis prohibition. The communities that paid the highest price for criminalization are now the least served by legalization.</p>
+    </div></div>
+    <div class="step"><div class="step-content">
+      <p>This is not a market that has failed to catch up. It is a market doing exactly what markets do: following purchasing power rather than patient need.</p>
+    </div></div>
+  </div>
+</div>
+
+<!-- SECTION 7 -->
+<div class="scroll-section">
+  <div class="scroll-graphic" id="graphic-sf"></div>
+  <div class="scroll-steps">
+    <div class="step"><div class="step-content"><h2>The Geographic Gap: San Francisco</h2></div></div>
+    <div class="step"><div class="step-content">
+      <p>San Francisco was among the first cities to legalize medical cannabis and has long promoted equity as a policy goal. Still, the data reflects a persistent gap. The commercial core near <strong>Union Square</strong> is well-served, while <strong>Bayview-Hunters Point</strong>, a neighborhood explicitly targeted by the city's own equity programs, remains underserved.</p>
+    </div></div>
+    <div class="step"><div class="step-content">
+      <p>When cities with active equity frameworks still fall short, the question worth asking is who legalization is actually working for.</p>
+    </div></div>
+  </div>
+</div>
+
+<!-- SECTION 8 -->
+<div class="scroll-section">
+  <div class="scroll-graphic" id="graphic-insurance"></div>
+  <div class="scroll-steps">
+    <div class="step"><div class="step-content"><h2>Cash Only</h2></div></div>
+    <div class="step"><div class="step-content">
+      <p>Here is the simplest version of the financial barrier:</p>
+      <p>A standard Tier 1 prescription costs roughly $15 with insurance. A month of medical cannabis for the same symptom costs an average of $295 out-of-pocket, because federal scheduling means zero insurance reimbursement. Getting your medical card does not close that gap. It just confirms you have access to an expensive option.</p>
+    </div></div>
+  </div>
+</div>
+
+<!-- SECTION 9 -->
+<div class="scroll-section">
+  <div class="scroll-graphic" id="graphic-disparity"></div>
+  <div class="scroll-steps">
+    <div class="step"><div class="step-content"><h2>Compounding Effects</h2></div></div>
+    <div class="step"><div class="step-content">
+      <p>For low-income and minority patients, the barriers do not arrive separately. They stack. No nearby dispensary. No insurance coverage. No job protection if you test positive. Each one is a problem on its own. Together, they form a system.</p>
+    </div></div>
+    <div class="step"><div class="step-content">
+      <p>As we've seen, high-income neighborhoods see, in some cities, five times the dispensary access of lower-income ones. We have legalized a medicine and then structured every surrounding system, from licensing to insurance to labor law, to ensure that the patients with the greatest need for affordable alternatives are the least likely to reach them. That is not an oversight. It is the predictable outcome of policies that were never designed with those patients in mind.</p>
+    </div></div>
+  </div>
+</div>
+
+<!-- CONCLUSION -->
+<div class="interlude">
+  <div class="interlude-inner">
+    <h2>What Comes Next</h2>
+    <p>Rescheduling cannabis to Schedule III opens real doors: <a href="https://www.nytimes.com/2025/12/19/health/cannabis-reclassification-schedule-drug-research.html">federal research funding, larger clinical trials, tax relief for producers, and eventually a legitimate evidence base for clinicians</a>. That matters. But rescheduling addresses the regulatory framework, not the patients currently locked out of the market.</p>
+    <p>Massachusetts, for example has the research institutions, the policy infrastructure, and a head start in legalization<a href="https://www.bostonglobe.com/2026/01/12/opinion/cannabis-medical-research-massachusetts-center/">to become a national model</a>. What it still lacks is a clear funding mechanism and a legislative mandate to move that forward. The Cannabis Control Commission currently operates without either.</p>
+    <p>If you live in a legal state, you likely know someone who uses cannabis medically, or you do yourself. The system you move through with relative ease, with private insurance, a car, and a job with some flexibility, is the same system that closes its doors on your neighbors who need it more. Changing that requires more than a new drug schedule. It requires deciding that their access is worth building toward.</p>
+  </div>
+</div>
+
+<script>
+(function() {
+
+  /* URLs split across two strings so Quarto's resource scanner
+     cannot detect them as fetchable URLs at render time */
+  var DW = 'https://datawrapper.' + 'dwcdn.net/';
+  var CHARTS = {
+    'graphic-legal':     DW + 'Zvi5J/6/',
+    'graphic-provider':  DW + 'RvBiH/2/',
+    'graphic-terpenes':  DW + 'ZS1y6/3/',
+    'graphic-nyc':       DW + '6JVL7/1/',
+    'graphic-boston':    DW + 'q2VVf/1/',
+    'graphic-la':        DW + '0WLd2/5/',
+    'graphic-sf':        DW + 'oBUNm/1/',
+    'graphic-insurance': DW + 'HRmJS/2/',
+    'graphic-disparity': DW + 'Y51O0/2/'
+  };
+
+  var TALL = ['graphic-nyc', 'graphic-la', 'graphic-sf', 'graphic-boston'];
+
+  function setHeight(f, id) {
+    var vh = window.innerHeight;
+    f.style.height = (TALL.indexOf(id) >= 0
+      ? Math.floor(vh * 0.90)
+      : Math.floor(vh * 0.75)) + 'px';
+  }
+
+  /* Create iframes at runtime — Quarto never sees them */
+  Object.keys(CHARTS).forEach(function(id) {
+    var g = document.getElementById(id);
+    if (!g) return;
+    var f = document.createElement('iframe');
+    f.src = CHARTS[id];
+    f.scrolling = 'no';
+    f.setAttribute('frameborder', '0');
+    setHeight(f, id);
+    g.appendChild(f);
+  });
+
+  window.addEventListener('resize', function() {
+    document.querySelectorAll('.scroll-graphic iframe').forEach(function(f) {
+      var id = f.closest('.scroll-graphic').id;
+      setHeight(f, id);
+    });
+  });
+
+  /* ── Nuclear text cleanup ──
+     Quarto or its filters inject the Datawrapper chart subtitle as raw text.
+     Walk every text node in the document and blank out any that contain
+     the leaked string. Run repeatedly to catch async injections. */
+  function purgeLeakedText() {
+    var walker = document.createTreeWalker(
+      document.body, NodeFilter.SHOW_TEXT, null, false
+    );
+    var node;
+    while ((node = walker.nextNode())) {
+      if (node.nodeValue.indexOf('miles from a legal storefront') !== -1) {
+        node.nodeValue = '';
+      }
+    }
+  }
+  purgeLeakedText();
+  setTimeout(purgeLeakedText, 200);
+  setTimeout(purgeLeakedText, 800);
+  window.addEventListener('load', purgeLeakedText);
+
+})();
+</script>
+```
